@@ -2,4 +2,4 @@ Flask
 Flask-CORS
 boto3
 opencv-python
-gunicorn app:app
+gunicorn
