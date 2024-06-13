@@ -157,6 +157,6 @@ def capture():
     else:
         return jsonify({'error': 'No image captured'}), 500
 
-if __name__ == "__main__":
-    port = 10000
-    app.run(debug=True, host='0.0.0.0', port=port)
+# if __name__ == "__main__":
+#     port = 10000
+#     app.run(debug=True, host='0.0.0.0', port=port)
