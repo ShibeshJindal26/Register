@@ -120,7 +120,9 @@ def lambda_handler(event, context):
         print(e)
         print(f"Error processing object {key} from bucket {bucket}.")
         raise e
-
+@app.route('/')
+def index():
+    return "Welcome to the Face Registration Service!"
 
 @app.route('/register', methods=['POST'])
 def capture():
