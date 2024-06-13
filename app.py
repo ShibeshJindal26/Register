@@ -6,11 +6,12 @@ from flask_cors import CORS
 
 app = Flask(__name__)
 CORS(app)
-
+# Specify the region
+region_name = 'us-west-1'
 # Initialize Boto3 clients
-s3 = boto3.client('s3')
-rekognition = boto3.client('rekognition')
-dynamodb = boto3.client('dynamodb')
+s3 = boto3.client('s3', region_name=region_name)
+rekognition = boto3.client('rekognition', region_name=region_name)
+dynamodb = boto3.client('dynamodb', region_name=region_name)
 
 # Capture an image using OpenCV
 def capture_image():
